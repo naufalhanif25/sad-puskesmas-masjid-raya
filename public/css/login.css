@@ -1,0 +1,24 @@
+.login-container {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-role-selector {
+    appearance: none;
+    outline: 2px solid rgba(0, 0, 0, 0.25);
+
+    background: white url('data:image/svg+xml;utf8,<svg height="12" fill="grey" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 32px;
+}
+
+.login-input {
+    outline: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.login-button {
+    background-color: #40A2E3;
+    transition: 80ms ease-out;
+}
+
+.login-button:hover {
+    background-color: #71B9EA;
+}

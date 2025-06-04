@@ -1,0 +1,8 @@
+#tv-queue-number {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.tv-running-text {
+    transition: 1s linear;
+}
