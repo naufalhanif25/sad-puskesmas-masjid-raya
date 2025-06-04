@@ -34,9 +34,11 @@
                 <span class="light-blue-bg w-full py-[16px] flex items-center justify-center">
                     <h1 class="poppins-semibold text-[16pt] text-white">No. Antrean</h1>
                 </span>
+                <!-- TODO: Backend nomor antrean -->
                 <span id="tv-queue-number" class="light-green-bg w-full grow flex items-center justify-center">
                     <h1 class="poppins-semibold text-[86pt] text-white">25</h1>
                 </span>
+                <!-- TODO: Backend ruang -->
                 <span id="tv-queue-room" class="light-blue-bg w-full py-[16px] flex items-center justify-center">
                     <h1 class="poppins-semibold text-[16pt] text-white">Ruang: B2</h1>
                 </span>
