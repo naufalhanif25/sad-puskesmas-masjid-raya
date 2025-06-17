@@ -22,3 +22,14 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/tv', function () {return view('tv');});
+
+//admin dashboard
+Route::get('/dashboard', function ()
+    {return view('dashboard');
+    })->name('dashboard');;
+
+//tambah-pasien
+Route::get('/addpasien', function () {
+    return view('addpasien');
+})->name('addpasien');
+
