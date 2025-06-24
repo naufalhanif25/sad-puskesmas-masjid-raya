@@ -33,3 +33,7 @@ Route::get('/addpasien', function () {
     return view('addpasien');
 })->name('addpasien');
 
+//list-pasien
+Route::get('/daftarpasien', function () {
+    return view('daftarpasien');
+})->name('daftarpasien');

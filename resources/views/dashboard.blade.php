@@ -23,7 +23,7 @@
         </a>
 
         <!-- Card Daftar Antrean -->
-        <a href="{{ url('/') }}" class="bg-white rounded-2xl shadow-lg w-96 h-96 flex flex-col items-center justify-center border border-blue-200 hover:shadow-xl hover:bg-blue-50 transition">
+        <a href="{{ route('daftarpasien') }}" class="bg-white rounded-2xl shadow-lg w-96 h-96 flex flex-col items-center justify-center border border-blue-200 hover:shadow-xl hover:bg-blue-50 transition">
             <img src="{{ asset('image/list.png') }}" class="w-28 h-28 mb-5">
             <span class="text-[#5FB1E7] font-medium text-2xl">Daftar Antrean</span>
         </a>
