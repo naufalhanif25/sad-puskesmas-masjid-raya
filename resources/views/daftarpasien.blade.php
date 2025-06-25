@@ -11,8 +11,8 @@
 
 @include('components.navbar')
 
-<div class="flex flex-1 items-center justify-center py-10">
-    <div class="bg-white border-2 border-blue-200 rounded-2xl shadow-md p-10 w-full max-w-5xl">
+<div class="flex flex-1 items-center justify-center py-10 px-8 md:px-24">
+    <div class="bg-white border-2 border-blue-200 rounded-2xl shadow-md p-10 w-full max-w-7xl">
 
         <div class="flex justify-center mb-4">
             <img src="{{ asset('image/list.png') }}" class="w-14 h-14">
@@ -31,66 +31,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td class="px-4 py-2 border">1</td>
-                    <td class="px-4 py-2 border">Oliver Sykes</td>
-                    <td class="px-4 py-2 border">28</td>
-                    <td class="px-4 py-2 border">D</td>
-                </tr>
-                <tr>
-                    <td class="px-4 py-2 border">2</td>
-                    <td class="px-4 py-2 border">Synyster Gates</td>
-                    <td class="px-4 py-2 border">29</td>
-                    <td class="px-4 py-2 border">E</td>
-                </tr>
-                <tr>
-                    <td class="px-4 py-2 border">3</td>
-                    <td class="px-4 py-2 border">Matt Shadows</td>
-                    <td class="px-4 py-2 border">30</td>
-                    <td class="px-4 py-2 border">A</td>
-                </tr>
-                <tr>
-                    <td class="px-4 py-2 border">4</td>
-                    <td class="px-4 py-2 border">M. Iqbal</td>
-                    <td class="px-4 py-2 border">31</td>
-                    <td class="px-4 py-2 border">B</td>
-                </tr>
-                <tr>
-                    <td class="px-4 py-2 border">5</td>
-                    <td class="px-4 py-2 border">Sarah Nur</td>
-                    <td class="px-4 py-2 border">32</td>
-                    <td class="px-4 py-2 border">C</td>
-                </tr>
-                <tr>
-                    <td class="px-4 py-2 border">6</td>
-                    <td class="px-4 py-2 border">Ahmad Rizky</td>
-                    <td class="px-4 py-2 border">33</td>
-                    <td class="px-4 py-2 border">D</td>
-                </tr>
-                <tr>
-                    <td class="px-4 py-2 border">7</td>
-                    <td class="px-4 py-2 border">Dewi Lestari</td>
-                    <td class="px-4 py-2 border">34</td>
-                    <td class="px-4 py-2 border">A</td>
-                </tr>
-                <tr>
-                    <td class="px-4 py-2 border">8</td>
-                    <td class="px-4 py-2 border">Rangga Saputra</td>
-                    <td class="px-4 py-2 border">35</td>
-                    <td class="px-4 py-2 border">C</td>
-                </tr>
-                <tr>
-                    <td class="px-4 py-2 border">9</td>
-                    <td class="px-4 py-2 border">Nadia Zahra</td>
-                    <td class="px-4 py-2 border">36</td>
-                    <td class="px-4 py-2 border">B</td>
-                </tr>
-                <tr>
-                    <td class="px-4 py-2 border">10</td>
-                    <td class="px-4 py-2 border">Fauzan Aulia</td>
-                    <td class="px-4 py-2 border">37</td>
-                    <td class="px-4 py-2 border">E</td>
-                </tr>
+                <tr><td class="px-4 py-2 border">1</td><td class="px-4 py-2 border">Oliver Sykes</td><td class="px-4 py-2 border">28</td><td class="px-4 py-2 border">D</td></tr>
+                <tr><td class="px-4 py-2 border">2</td><td class="px-4 py-2 border">Synyster Gates</td><td class="px-4 py-2 border">29</td><td class="px-4 py-2 border">E</td></tr>
+                <tr><td class="px-4 py-2 border">3</td><td class="px-4 py-2 border">Matt Shadows</td><td class="px-4 py-2 border">30</td><td class="px-4 py-2 border">A</td></tr>
+                <tr><td class="px-4 py-2 border">4</td><td class="px-4 py-2 border">M. Iqbal</td><td class="px-4 py-2 border">31</td><td class="px-4 py-2 border">B</td></tr>
+                <tr><td class="px-4 py-2 border">5</td><td class="px-4 py-2 border">Sarah Nur</td><td class="px-4 py-2 border">32</td><td class="px-4 py-2 border">C</td></tr>
+                <tr><td class="px-4 py-2 border">6</td><td class="px-4 py-2 border">Ahmad Rizky</td><td class="px-4 py-2 border">33</td><td class="px-4 py-2 border">D</td></tr>
+                <tr><td class="px-4 py-2 border">7</td><td class="px-4 py-2 border">Dewi Lestari</td><td class="px-4 py-2 border">34</td><td class="px-4 py-2 border">A</td></tr>
+                <tr><td class="px-4 py-2 border">8</td><td class="px-4 py-2 border">Rangga Saputra</td><td class="px-4 py-2 border">35</td><td class="px-4 py-2 border">C</td></tr>
+                <tr><td class="px-4 py-2 border">9</td><td class="px-4 py-2 border">Nadia Zahra</td><td class="px-4 py-2 border">36</td><td class="px-4 py-2 border">B</td></tr>
+                <tr><td class="px-4 py-2 border">10</td><td class="px-4 py-2 border">Fauzan Aulia</td><td class="px-4 py-2 border">37</td><td class="px-4 py-2 border">E</td></tr>
                 </tbody>
             </table>
         </div>

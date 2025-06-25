@@ -37,3 +37,8 @@ Route::get('/addpasien', function () {
 Route::get('/daftarpasien', function () {
     return view('daftarpasien');
 })->name('daftarpasien');
+
+//dokter dashboard
+Route::get('/dokter', function () {
+    return view('dokter');
+})->name('dokter');
