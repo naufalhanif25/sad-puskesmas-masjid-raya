@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
-    <title>Tambah-Pasien</title>
+    <title>Tambah Pasien | {{ config('app.name', 'Laravel') }}</title>
 </head>
 
 <body class="bg-white min-h-screen flex flex-col">

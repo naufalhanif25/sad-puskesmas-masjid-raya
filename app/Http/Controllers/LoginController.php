@@ -5,11 +5,21 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
     public function index()
     {
+        if (auth()->check()) {
+            if (Session::has('admin_logged_in')) {
+                return redirect('/dashboard');
+            }
+            elseif(Session::has('staff_logged_in')) {
+                return redirect('/dokter');
+            }
+        }
+        
         return view('login');
     }
 
@@ -31,25 +41,28 @@ class LoginController extends Controller
             ->where('role', $credentials['role'])
             ->first();
 
+        if (auth()->check()) {
+            if (Session::has('admin_logged_in')) {
+                return redirect('/dashboard');
+            }
+            elseif(Session::has('staff_logged_in')) {
+                return redirect('/dokter');
+            }
+        }
+
         if ($user && \Hash::check($credentials['password'], $user->password)) {
             Auth::login($user);
             $request->session()->regenerate();
 
-            // TODO: Ganti dengan view admin
             if ($user->role == 'admin') {
-                return response()->json([
-                    'message' => 'berhasil login',
-                    'role' => $user->role,
-                    'name' => $user->name,
-                ]);
+                Session::put('admin_logged_in', true);
+
+                return view('dashboard');
             }
-            // TODO: Ganti dengan view staf
             elseif ($user->role == 'staf') {
-                return response()->json([
-                    'message' => 'berhasil login',
-                    'role' => $user->role,
-                    'name' => $user->name,
-                ]);
+                Session::put('staff_logged_in', true);
+
+                return view('dokter');
             }
             else {
                 redirect("/")->withErrors(['role' => 'Role tidak valid. Silahkan coba lagi.']);
@@ -66,6 +79,13 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        if (Session::has('admin_logged_in')) {
+            Session::forget('admin_logged_in');
+        }
+        elseif (Session::has('staff_logged_in')) {
+            Session::forget('staff_logged_in');
+        }
+
+        return redirect('/');
     }
 }

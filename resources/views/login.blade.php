@@ -30,7 +30,14 @@
                 <option value="staf">Staf</option>
             </select>
             <input type="text" class="login-input w-full p-[12px] rounded-[8px] poppins-normal text-[12pt]" name="nip" placeholder="NIP">
-            <input type="password" class="login-input w-full p-[12px] rounded-[8px] poppins-normal text-[12pt]" name="password" placeholder="Password">
+            <div class="login-input w-full flex flex-row items-center justify-center gap-2 rounded-[8px] p-[12px] overflow-hidden">
+                <input id="password-field" type="password" class="outline-none w-full poppins-normal text-[12pt]" name="password" placeholder="Password">
+
+                <svg id="hide-show-icon" width="24px" height="24px" class="hide-show-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" onclick="click()">
+                    <path d="M2,12S5,4,12,4s10,8,10,8-2,8-10,8S2,12,2,12Z"></path>
+                    <circle cx="12" cy="12" r="4"></circle>
+                </svg>
+            </div>
             @if ($errors->any())
                 <div class="border-[2px] border-red-300 w-full py-[12px] rounded-[8px] bg-red-100 text-center poppins-normal text-[10pt] text-red-600">
                     <ul>
@@ -45,5 +52,7 @@
     </main>
 
     <p class="poppins-normal text-[8pt] opacity-[0.5]">Copyright 2025 Puskesmas Masjid Raya. All Rights Reserved</p>
+
+    <script src="js/hideshow.js"></script>
 </body>
 </html>
