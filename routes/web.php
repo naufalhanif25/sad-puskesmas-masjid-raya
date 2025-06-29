@@ -5,6 +5,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\PatientController;
 
 Route::get('/', function () {
     // FIXME: Akun dummy
@@ -31,7 +33,7 @@ Route::get('/', function () {
 
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/login', function () {
-    if (auth()->check()) {
+    if (Auth::check()) {
         if (Session::has('admin_logged_in')) {
             return redirect('/dashboard');
         }
@@ -45,7 +47,7 @@ Route::get('/login', function () {
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/logout', function () {
-    if (auth()->check()) {
+    if (Auth::check()) {
         if (Session::has('admin_logged_in')) {
             return redirect('/dashboard');
         }
@@ -60,8 +62,8 @@ Route::get('/logout', function () {
 Route::get('/tv', function () {return view('tv');});
 
 //admin dashboard
-Route::get('/dashboard', function (){
-    if (!auth()->check()) {
+Route::get('/dashboard', function () {
+    if (!Auth::check()) {
         return redirect('/');
     }
 
@@ -74,7 +76,7 @@ Route::get('/dashboard', function (){
 
 //tambah-pasien
 Route::get('/addpasien', function () {
-    if (!auth()->check()) {
+    if (!Auth::check()) {
         return redirect('/');
     }
 
@@ -87,7 +89,7 @@ Route::get('/addpasien', function () {
 
 //list-pasien
 Route::get('/daftarpasien', function () {
-    if (!auth()->check()) {
+    if (!Auth::check()) {
         return redirect('/');
     }
 
@@ -100,7 +102,7 @@ Route::get('/daftarpasien', function () {
 
 //dokter dashboard
 Route::get('/dokter', function () {
-    if (!auth()->check()) {
+    if (!Auth::check()) {
         return redirect('/');
     }
 
@@ -114,3 +116,7 @@ Route::get('/dokter', function () {
 Route::get('/session', function () {
     return Session::all();
 });
+
+Route::get('addpasien', [PatientController::class, 'create'])->name('addpasien');
+Route::post('/patients/store', [PatientController::class, 'store'])->name('patients.store');
+Route::get('daftarpasien', [PatientController::class, 'index'])->name('daftarpasien');
