@@ -18,10 +18,9 @@
 
         <h2 class="text-center text-lg font-bold mb-8">Data Pasien</h2>
 
-        {{-- TODO: Logika data pasien --}}
-
         <!-- Data Pasien -->
         <div class="space-y-5">
+            {{-- TODO: Logika data pasien --}}
             <!-- No Antrean -->
             <div>
                 <label class="block font-semibold mb-1">No. Antrean</label>
@@ -49,7 +48,6 @@
             <!-- Status dan Tombol -->
             <div class="w-full grid grid-cols-3 gap-4 pt-6">
                 {{-- TODO: Logika status --}}
-
                 <!-- Status Box -->
                 <div class="flex gap-[12px] justify-between items-center border border-gray-300 rounded-md px-4 py-2 bg-white w-full max-w-[260px]">
                     <span class="font-semibold text-gray-800">Status</span>
@@ -57,7 +55,6 @@
                 </div>
 
                 {{-- TODO: Logika selesai dan selanjutnya --}}
-
                 <!-- Tombol Selesai -->
                 <form action="#" method="POST" class="w-full">
                     @csrf
