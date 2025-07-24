@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="overflow-hidden w-screen h-screen flex flex-col items-center justify-center">
-    <header class="blue-bg w-screen h-fit py-[16px] px-[32px] rounded-b-[16px] flex flex-row items-center justify-center">
+    <header class="blue-bg w-screen h-fit py-[18px] px-[32px] rounded-b-[16px] flex flex-row items-center justify-center">
         <span class="flex items-center justify-center size-[48px]">
             <img src="image/puskesmas.png" alt="Puskesmas" class="h-full">
         </span>
-        <span class="h-fit grow flex flex-col items-center justify-center">
-            <h1 class="montserrat-bold m-0 text-[16pt] text-white">Puskesmas Masjid Raya</h1>
-            <h1 class="montserrat-medium m-0 text-[10pt] text-white">Gp. Beurandeh, Kec. Masjid Raya, Kab. Aceh Besar, Aceh</h1>
+        <span class="h-fit grow flex flex-col items-center justify-center gap-[4px]">
+            <h1 class="montserrat-bold m-0 text-[20pt] leading-[24pt] text-white">Puskesmas Masjid Raya</h1>
+            <h1 class="montserrat-medium m-0 text-[12pt] leading-[16pt] text-white">Gp. Beurandeh, Kec. Masjid Raya, Kab. Aceh Besar, Aceh</h1>
         </span>
         <span class="flex items-center justify-center size-[48px]">
             <img src="image/aceh_besar.png" alt="Aceh Besar" class="h-full">
@@ -36,7 +36,7 @@
                 </span>
                 <!-- TODO: Backend nomor antrean -->
                 <span id="tv-queue-number" class="light-green-bg w-full grow flex items-center justify-center">
-                    <h1 class="poppins-semibold text-[86pt] text-white">25</h1>
+                    <h1 class="poppins-medium text-[128pt] text-white">25</h1>
                 </span>
                 <!-- TODO: Backend ruang -->
                 <span id="tv-queue-room" class="light-blue-bg w-full py-[16px] flex items-center justify-center">
@@ -44,30 +44,22 @@
                 </span>
             </div>
         </section>
-        <section class="fade-blue-bg w-full h-[200px] p-[16px] gap-[16px] flex flex-row items-center justify-center rounded-[16px]">
+        <section class="fade-blue-bg w-full h-[240px] p-[16px] gap-[16px] grid grid-cols-4 rounded-[16px]">
             <div class="light-blue-bg grow h-full rounded-[12px] leading-none gap-[12px] flex flex-col items-center justify-center">
-                <p class="poppins-bold m-0 text-[12pt] text-white">Poli Anak</p>
-                <h1 class="poppins-bold m-0 text-[60pt] text-white">A</h1>
+                <p class="poppins-medium m-0 text-[14pt] text-wrap text-center text-white">Pelayanan <br> Gigi dan Mulut</p>
+                <h1 class="poppins-bold m-0 text-[64pt] text-center text-white">R1</h1>
             </div>
             <div class="light-blue-bg grow h-full rounded-[12px] leading-none gap-[12px] flex flex-col items-center justify-center">
-                <p class="poppins-bold m-0 text-[12pt] text-white">P. Lansia (Ruang 1)</p>
-                <h1 class="poppins-bold m-0 text-[60pt] text-white">B1</h1>
+                <p class="poppins-medium m-0 text-[14pt] text-wrap text-center text-white">Pelayanan <br> Usia Dewasa dan Lanjut Usia</p>
+                <h1 class="poppins-bold m-0 text-[64pt] text-center text-white">R2</h1>
             </div>
             <div class="light-blue-bg grow h-full rounded-[12px] leading-none gap-[12px] flex flex-col items-center justify-center">
-                <p class="poppins-bold m-0 text-[12pt] text-white">P. Lansia (Ruang 2)</p>
-                <h1 class="poppins-bold m-0 text-[60pt] text-white">B2</h1>
+                <p class="poppins-medium m-0 text-[14pt] text-wrap text-center text-white">Pelayanan <br> Anak dan Remaja</p>
+                <h1 class="poppins-bold m-0 text-[64pt] text-center text-white">R3</h1>
             </div>
             <div class="light-blue-bg grow h-full rounded-[12px] leading-none gap-[12px] flex flex-col items-center justify-center">
-                <p class="poppins-bold m-0 text-[12pt] text-white">Poli KIA/KB</p>
-                <h1 class="poppins-bold m-0 text-[60pt] text-white">C</h1>
-            </div>
-            <div class="light-blue-bg grow h-full rounded-[12px] leading-none gap-[12px] flex flex-col items-center justify-center">
-                <p class="poppins-bold m-0 text-[12pt] text-white">Poli Gigi</p>
-                <h1 class="poppins-bold m-0 text-[60pt] text-white">D</h1>
-            </div>
-            <div class="light-blue-bg grow h-full rounded-[12px] leading-none gap-[12px] flex flex-col items-center justify-center">
-                <p class="poppins-bold m-0 text-[12pt] text-white">Poli Umum</p>
-                <h1 class="poppins-bold m-0 text-[60pt] text-white">E</h1>
+                <p class="poppins-medium m-0 text-[14pt] text-wrap text-center text-white">Pelayanan <br> Keluarga Berencana</p>
+                <h1 class="poppins-bold m-0 text-[64pt] text-center text-white">R4</h1>
             </div>
         </section>
     </main>
