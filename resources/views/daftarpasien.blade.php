@@ -43,16 +43,6 @@
                             <td colspan="4" class="px-4 py-2 border text-center text-gray-500">Tidak ada data pasien</td>
                         </tr>
                     @endforelse
-                {{-- <tr><td class="px-4 py-2 border">1</td><td class="px-4 py-2 border">Oliver Sykes</td><td class="px-4 py-2 border">28</td><td class="px-4 py-2 border">D</td></tr>
-                <tr><td class="px-4 py-2 border">2</td><td class="px-4 py-2 border">Synyster Gates</td><td class="px-4 py-2 border">29</td><td class="px-4 py-2 border">E</td></tr>
-                <tr><td class="px-4 py-2 border">3</td><td class="px-4 py-2 border">Matt Shadows</td><td class="px-4 py-2 border">30</td><td class="px-4 py-2 border">A</td></tr>
-                <tr><td class="px-4 py-2 border">4</td><td class="px-4 py-2 border">M. Iqbal</td><td class="px-4 py-2 border">31</td><td class="px-4 py-2 border">B</td></tr>
-                <tr><td class="px-4 py-2 border">5</td><td class="px-4 py-2 border">Sarah Nur</td><td class="px-4 py-2 border">32</td><td class="px-4 py-2 border">C</td></tr>
-                <tr><td class="px-4 py-2 border">6</td><td class="px-4 py-2 border">Ahmad Rizky</td><td class="px-4 py-2 border">33</td><td class="px-4 py-2 border">D</td></tr>
-                <tr><td class="px-4 py-2 border">7</td><td class="px-4 py-2 border">Dewi Lestari</td><td class="px-4 py-2 border">34</td><td class="px-4 py-2 border">A</td></tr>
-                <tr><td class="px-4 py-2 border">8</td><td class="px-4 py-2 border">Rangga Saputra</td><td class="px-4 py-2 border">35</td><td class="px-4 py-2 border">C</td></tr>
-                <tr><td class="px-4 py-2 border">9</td><td class="px-4 py-2 border">Nadia Zahra</td><td class="px-4 py-2 border">36</td><td class="px-4 py-2 border">B</td></tr>
-                <tr><td class="px-4 py-2 border">10</td><td class="px-4 py-2 border">Fauzan Aulia</td><td class="px-4 py-2 border">37</td><td class="px-4 py-2 border">E</td></tr> --}}
                 </tbody>
             </table>
         </div>
