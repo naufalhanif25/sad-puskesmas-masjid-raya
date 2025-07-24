@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
     <title>Data Pasien | {{ config('app.name', 'Laravel') }}</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/global.css">
 </head>
 
 <body class="bg-white min-h-screen flex flex-col">
@@ -12,9 +14,11 @@
 @include('components.navbar')
 
 <div class="flex flex-1 items-center justify-center py-10 px-10 md:px-40">
-    <div class="bg-white shadow-md rounded-xl p-8 w-full max-w-2xl border border-blue-100">
+    <div class="bg-white shadow-md rounded-xl p-8 w-full max-w-3xl border border-blue-100">
 
         <h2 class="text-center text-lg font-bold mb-8">Data Pasien</h2>
+
+        {{-- TODO: Logika data pasien --}}
 
         <!-- Data Pasien -->
         <div class="space-y-5">
@@ -43,19 +47,30 @@
             </div>
 
             <!-- Status dan Tombol -->
-            <div class="flex items-stretch justify-between gap-4 pt-6">
+            <div class="w-full grid grid-cols-3 gap-4 pt-6">
+                {{-- TODO: Logika status --}}
+
                 <!-- Status Box -->
-                <div class="flex justify-between items-center border border-gray-300 rounded-md px-4 py-2 bg-white w-full max-w-[260px]">
+                <div class="flex gap-[12px] justify-between items-center border border-gray-300 rounded-md px-4 py-2 bg-white w-full max-w-[260px]">
                     <span class="font-semibold text-gray-800">Status</span>
-                    <span class="text-green-600 font-semibold">Ada pasien</span>
+                    <span class="text-green-600 text-left text-nowrap overflow-hidden font-medium">Sedang proses</span>
                 </div>
+
+                {{-- TODO: Logika selesai dan selanjutnya --}}
 
                 <!-- Tombol Selesai -->
                 <form action="#" method="POST" class="w-full">
                     @csrf
                     <button type="submit"
-                            class="bg-gradient-to-r from-[#40A2E3] to-[#60B8F0] text-white font-bold px-4 py-2 w-full rounded-md shadow text-center hover:opacity-90 transition">
+                            class="bg-[#0D9276] text-white font-bold px-4 py-2 w-full rounded-md shadow text-center hover:opacity-90 transition">
                         Selesai
+                    </button>
+                </form>
+                <form action="#" method="POST" class="w-full">
+                    @csrf
+                    <button type="submit"
+                            class="bg-[#40A2E3] text-white font-bold px-4 py-2 w-full rounded-md shadow text-center hover:opacity-90 transition">
+                        Selanjutnya
                     </button>
                 </form>
             </div>
