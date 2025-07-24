@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PatientController;
 
 Route::get('/', function () {
-    // FIXME: Akun dummy
+    // FIXME: Akun dummy (Hapus jika sudah tahap production)
     if (!User::where('name', 'admin_dummy')->exists()) {
         User::create([
             'name' => 'admin_dummy',
@@ -19,6 +19,7 @@ Route::get('/', function () {
         ]);
     }
 
+    // FIXME: Akun dummy (Hapus jika sudah tahap production)
     if (!User::where('name', 'staf_dummy')->exists()) {
         User::create([
             'name' => 'staf_dummy',
@@ -113,6 +114,7 @@ Route::get('/dokter', function () {
     return view('dokter');
 })->name('dokter');
 
+// FIXME: Endpoint session untuk melihat user pada sesi (Hapus jika sudah tahap production)
 Route::get('/session', function () {
     return Session::all();
 });
